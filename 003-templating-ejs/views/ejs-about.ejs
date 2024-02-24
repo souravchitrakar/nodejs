@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Injecting dynamic values -->
+    <!-- Any valid JS expression can be added inside <%= %> -->
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <!-- Including a common part which is defined somewhere else -->
+    <%- include("includes/ejs-common.ejs") %>
+
+    <!-- Valid JS code can be added inside <% %> -->
+    <!-- Implementing loop -->
+    <ul>
+        <% users.forEach(function(user){ %>
+            <li><%= user.name %></li>
+        <% }) %>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Injecting dynamic values -->
+    <!-- Any valid JS expression can be added inside <%= %> -->
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <!-- Including a common part which is defined somewhere else -->
+    <!-- May be the navigation section is common so implement is once and use it -->
+    <%- include("includes/ejs-common.ejs") %>
+
+    <!-- Including valid JS expression inside <%= %> -->
+    <h2 class="<%= user==='Kuhu'?'super-admin':'' %>">Home Page</h2>
+
+    <p>The current user is: <%= user %></p>
+
+    <!-- Valid JS code can be added inside <% %> -->
+    <!-- Implementing if else -->
+    <% if(user === "Kuhu") { %>
+        <p>The user is Super Admin</p>
+    <% } else if(user === "Debjani" || user === "Sourav") { %>
+        <p>The user is Admin</p>
+    <% } else { %>
+        <p>The user is not Admin</p>
+    <% } %>
+
+</body>
+</html>

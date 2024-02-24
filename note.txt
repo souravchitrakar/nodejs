@@ -6,10 +6,3 @@ Add the following in the package.json file's script section (this will run index
 Install nodemon using (the --save-dev is for dev dependency): npm install nodemon --save-dev 
 Add the following in the package.json file's script section (this will run index.js with nodemon when we will use "npm run start-dev"): "start-dev": "nodemon index.js"
 Install express using: npm install --save express
-
-
-
-
-npm install --save ejs pug express-handlebars
-
-
