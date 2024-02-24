@@ -1,0 +1,19 @@
+extends layouts/pug-layout.pug
+
+block title
+    //- The object passed while rendering pug-home.pug has the attribute pageTitle
+    //- Injecting dynamic values using #{}
+    title #{pageTitle}
+
+block main
+    main
+        h2.c1.c2#i1 Home Page
+        p The current user is: #{user}
+
+        //- Implementing if else
+        if user === "Sourav" || user === "Debjani"
+            p The user is Admin
+        else if user === "Kuhu"
+            p The user is Super Admin
+        else
+            p The user is not Admin
