@@ -3,17 +3,16 @@
 //- Pug is basically indented HTML tags
 
 doctype html
-//- HTML tag's default attributes are defined inside "()" in coma seperated format
+//- HTML tag's attributes are defined inside "()" in coma seperated format
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        //- Defining the title block, expectation is that the child will implement that (if not then this section will be blank)
-        block title
+        //- Dynamically injecting the value, children who are inheriting the layout must have the "pageTitle", then it will be automatically accessable in the parent layout as well
+        title #{pageTitle}
     body 
         //- This h1 will be shown in all pages which will extend this base layout
-        //- The classes are added using "." and the ID is added using "#"
         //- The HTML tag is placed after a space, here it is "This is our website using PUG"
-        h1.c1.c2#i1 This is our website using PUG
+        h1 This is our website using PUG
         //- Defining the main block
         block main

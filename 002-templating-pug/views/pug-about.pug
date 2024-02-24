@@ -1,12 +1,6 @@
 //- Extending the base layout
 extends layouts/pug-layout.pug
 
-//- Implementing the title block
-block title
-    //- The object passed while rendering pug-about.pug has the attribute pageTitle
-    //- Injecting dynamic values using #{}
-    title #{pageTitle}
-
 block main
     ul
         //- Looping the users
