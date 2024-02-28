@@ -3,6 +3,12 @@ Node Project Setup
 Create the project directory and inside that run: npm init
 Press enter for all the provided options and go with the default
 Add the following in the package.json file's script section (this will run index.js when we will use "npm start"): "start": "node index.js". The start is special, if you add "start-server": "node index.js" then "npm run start-server" will call "node index.js"
-Install nodemon using (the --save-dev is for dev dependency): npm install nodemon --save-dev 
+Install nodemon using (the --save-dev is for dev dependency): npm install nodemon --save-dev
 Add the following in the package.json file's script section (this will run index.js with nodemon when we will use "npm run start-dev"): "start-dev": "nodemon index.js"
 Install express using: npm install --save express
+
+MVC
+===
+Model is the data that we work with
+View is the output user access
+Controller is the connecting point between Model and View
