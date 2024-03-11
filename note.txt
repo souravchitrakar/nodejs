@@ -1,14 +1,21 @@
+Basic
+=====
+When we import and file using "require" then node will execute that file at that place (let's say importing a.js using "require" will execute that file a.js)
+
 Node Project Setup
 ==================
 Create the project directory and inside that run: npm init
 Press enter for all the provided options and go with the default
 Add the following in the package.json file's script section (this will run index.js when we will use "npm start"): "start": "node index.js". The start is special, if you add "start-server": "node index.js" then "npm run start-server" will call "node index.js"
 Install nodemon using (the --save-dev is for dev dependency): npm install nodemon --save-dev
-Add the following in the package.json file's script section (this will run index.js with nodemon when we will use "npm run start-dev"): "start-dev": "nodemon index.js"
+Add the following in the package.json file's script section (this will run index.js with nodemon when we will use "npm run start-dev"): "start-dev": "nodemon index.js".
 Install express using: npm install --save express
 
 MVC
 ===
-Model is the data that we work with
-View is the output user access
-Controller is the connecting point between Model and View
+Model is the data that we work with (Models are clubbed in the models directory). They are the JS Classes to access, create, modify and delete data.
+View is the output user access (Views are clubbed in the views directory). All the pug/ejs templates are the views.
+Controller is the connecting point between Model and View, the are the functions that routes will execute (Controllers are clubbed in the controllers directory).
+All the routes are clubbed in the routes directory.
+All the static files like CSS, JS are clubbed inside the public directory.
+All the utility functions are clubbed inside util directory.
